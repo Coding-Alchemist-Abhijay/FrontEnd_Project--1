@@ -18,7 +18,7 @@ body {
 .nav{
     height: 100px;
     width: 100%;
-    background-color: #111;
+    background-color: #11111100;
     padding-left: 8%;
     padding-right: 30%;
     display: flex;
@@ -52,6 +52,16 @@ body {
 .video_div{
     height: 800px;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.video_div::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 80%, rgba(0,0,0,0.7) 100%);
 }
 .video_div video{
     height: 100%;
@@ -62,10 +72,9 @@ body {
     height: 800px;
     width: 100%;
     position: absolute;
-    top:3%;
+    top:0;
     left:0;
-    background-color: #1111118c;
-    opacity: 0.8;
+    background-color: #111111a0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,14 +124,43 @@ body {
     font-weight: 100;
 }
 .div_1{
-    height: 300px;
+    height: 200px;
     font-size: 120px;
     -webkit-text-stroke: 2px white;
     display: flex;
     overflow-x: hidden;
     white-space: nowrap;
     position: absolute;
-    top:103%;
+    top:95%;
     font-weight: 900;
     z-index: 9;
+    overflow-y:hidden ;
+}
+
+.div_1 h1 {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-family: montserrat, sans-serif;
+    margin-right: 50px;
+    flex-shrink: 0;
+    transform: translateX(-80%);
+}
+.cursor_div{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    z-index: 9;
+    position: fixed;
+    pointer-events: none;
+}
+.transparent_div{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background-color: rgba(172, 255, 47, 0.223);
+    box-shadow: 0 0 150px 150px rgba(172, 255, 47, 0.235);
+    z-index:10;
+    position: fixed;
+    pointer-events: none;
 }
