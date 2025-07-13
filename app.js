@@ -145,3 +145,46 @@ img2_div.addEventListener("mouseleave", function() {
     ease: "power2.out"
   });
 });
+
+let card_1 = document.querySelector(".card_1");
+let card_2 = document.querySelector(".card_2");
+let card_3 = document.querySelector(".card_3");
+
+let card_img_1 = document.querySelector(".card_1 img");
+let ccard_img_2 = document.querySelector(".card_2 img");
+let card_img_3 = document.querySelector(".card_3 img");
+
+
+[
+  { card: card_1, img: card_img_1 },
+  { card: card_2, img: ccard_img_2 },
+  { card: card_3, img: card_img_3 }
+].forEach(({ card, img }) => {
+  card.addEventListener("mouseenter", () => {
+    gsap.set(cursor, {
+      scale: 5,
+      backgroundColor: "transparent",
+      border: "1px solid white",
+      ease: "power3.out"
+    });
+    card.style.overflow = "hidden";
+    gsap.to(img, {
+      opacity: 0,
+      scale : 1.2,
+      duration:0.4,
+      ease : "none"
+    });
+  });
+
+  card.addEventListener("mouseleave", () => {
+    gsap.set(cursor, {
+      scale: 1,
+      backgroundColor: "greenyellow",
+      border: "none"
+    });
+    gsap.to(img, {
+      opacity: 1,
+      scale : 1
+    });
+  });
+});
