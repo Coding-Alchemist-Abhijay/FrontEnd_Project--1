@@ -480,3 +480,40 @@ body {
     object-fit: cover;
     border-radius: 20px;
 }
+.dot_div{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+.left-side{
+    margin-bottom: 25px;
+}
+.dot_big_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    cursor: pointer;
+}   
+#food_img_1{
+    z-index: 2;
+}
+.t_div_1{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+}
+.t_div_2{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+}
+.t_div_3{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+}

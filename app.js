@@ -188,3 +188,63 @@ let card_img_3 = document.querySelector(".card_3 img");
     });
   });
 });
+let dot_1 = document.querySelector("#dot_1");
+let dot_2 = document.querySelector("#dot_2");
+let dot_3 = document.querySelector("#dot_3");
+let food_img_1 = document.querySelector("#food_img_1");
+let food_img_2 = document.querySelector("#food_img_2");
+let food_img_3 = document.querySelector("#food_img_3");
+let t_1 = document.querySelector(".t_div_1");
+let t_2 = document.querySelector(".t_div_2");
+let t_3 = document.querySelector(".t_div_3");
+dot_1.addEventListener("click" , ()=> {
+  gsap.to(dot_1, {
+    backgroundColor:"#96E910"
+  })
+  gsap.to(t_1, {
+    border: "1px solid #96E910",
+    scale:2.4
+  })
+  gsap.to(food_img_1, {
+    zIndex: 3,
+    duration:1,
+    ease:"power3.out"
+  })
+  gsap.set([dot_2, dot_3], { clearProps: "backgroundColor" });
+  gsap.set([t_2, t_3], { clearProps: "border,scale" });
+  gsap.to([food_img_2, food_img_3], { clearProps: "zIndex" });
+})
+dot_2.addEventListener("click" , ()=> {
+  gsap.to(dot_2, {
+    backgroundColor:"#96E910"
+  })
+  gsap.to(t_2, {
+    border: "1px solid #96E910",
+    scale:2.4
+  })
+  gsap.to(food_img_2, {
+    zIndex: 3,
+    duration:1,
+    ease:"power3.out"
+  })
+  gsap.set([dot_1, dot_3], { clearProps: "backgroundColor" });
+  gsap.set([t_1, t_3], { clearProps: "border,scale" });
+  gsap.to([food_img_1, food_img_3], { clearProps: "zIndex" });
+})
+dot_3.addEventListener("click" , ()=> {
+  gsap.to(dot_3, {
+    backgroundColor:"#96E910"
+  })
+  gsap.to(t_3, {
+    border: "1px solid #96E910",
+    scale:2.4
+  })
+  gsap.to(food_img_3 , {
+    zIndex: 3,
+    duration:1,
+    ease:"power3.out"
+  })
+  gsap.set([dot_1, dot_2], { clearProps: "backgroundColor" });
+  gsap.set([t_1, t_2], { clearProps: "border,scale" });
+  gsap.to([food_img_1, food_img_2], { clearProps: "zIndex" });
+})
